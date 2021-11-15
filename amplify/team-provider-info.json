@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-temptracker-dev-223723-authRole",
+      "UnauthRoleArn": "arn:aws:iam::978445969952:role/amplify-temptracker-dev-223723-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::978445969952:role/amplify-temptracker-dev-223723-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-temptracker-dev-223723-deployment",
+      "UnauthRoleName": "amplify-temptracker-dev-223723-unauthRole",
+      "StackName": "amplify-temptracker-dev-223723",
+      "StackId": "arn:aws:cloudformation:us-east-1:978445969952:stack/amplify-temptracker-dev-223723/59607410-45c5-11ec-bd6a-0a76fdf35965",
+      "AmplifyAppId": "dy56srizqgrvo"
+    }
+  }
+}

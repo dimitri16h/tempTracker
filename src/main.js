@@ -1,6 +1,18 @@
 import Vue from 'vue'
 import App from './App.vue'
+import Amplify from 'aws-amplify'
+import '@aws-amplify/ui-vue'
+import aws_exports from './aws-exports'
+import './assets/main.css'
+import './assets/util.css'
+import axios from 'axios';
+import { BootstrapVue} from 'bootstrap-vue'
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
 
+Vue.use(BootstrapVue)
+Vue.prototype.$http = axios;
+Amplify.configure(aws_exports);
 Vue.config.productionTip = false
 
 new Vue({
