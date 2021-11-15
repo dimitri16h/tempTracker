@@ -242,7 +242,7 @@ export default {
       this.weatherData = [];
       for (let i=0; i<locations.length; i++) {
         try {
-          let url = `http://api.openweathermap.org/data/2.5/weather?zip=${locations[i]}&units=imperial&appid=${apiKey}`
+          let url = `https://api.openweathermap.org/data/2.5/weather?zip=${locations[i]}&units=imperial&appid=${apiKey}`
           const response = await this.$http.get(url);
           // JSON responses are automatically parsed.
           if(response){
@@ -254,10 +254,15 @@ export default {
         } 
         catch (error) {
           console.log(error);
-          this.weatherData[i] = { name: "Unknown", icon: `https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/50d.svg`, id: i };
+          this.weatherData[i] = { 
+            id: i,
+            name: "Unknown", 
+            icon: `https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/50d.svg`, 
+            main: {
+              temp: "??"
+            } };
         } 
         finally {
-          console.log(this.weatherData.length, locations.length)
           if (this.weatherData.length == locations.length) this.loading = false;
         }
       }      
